@@ -1,15 +1,14 @@
-﻿namespace TestTasks.InternationalTradeTask.Models
+﻿namespace TestTasks.InternationalTradeTask.Models;
+
+internal interface ICommodityGroup
 {
-    internal interface ICommodityGroup
-    {
-        public string Name { get; }
+    public string Name { get; }
 
-        public string SITCCode { get;  }
+    public string SITCCode { get;  }
 
-        public ICommodityGroup[] SubGroups { get; }
+    public ICommodityGroup[] SubGroups { get; }
 
-        public double? ImportTarif { get; }
+    public double? ImportTarif { get; }
 
-        public double? ExportTarif { get; }
-    }
+    public double? ExportTarif { get; }
 }
