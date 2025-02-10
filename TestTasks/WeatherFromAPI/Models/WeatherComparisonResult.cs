@@ -1,21 +1,12 @@
-﻿namespace TestTasks.WeatherFromAPI.Models
+﻿namespace TestTasks.WeatherFromAPI.Models;
+
+public class WeatherComparisonResult(string cityA, string cityB, int warmerDays, int rainierDays)
 {
-    public class WeatherComparisonResult
-    {
-        public string CityA { get; init; }
+    public string CityA { get; init; } = cityA;
 
-        public string CityB { get; init; }
+    public string CityB { get; init; } = cityB;
 
-        public int WarmerDaysCount { get; init; }
+    public int WarmerDaysCount { get; init; } = warmerDays;
 
-        public int RainierDaysCount { get; init; }
-
-        public WeatherComparisonResult(string cityA, string cityB, int warmerDays, int rainierDays)
-        {
-            CityA = cityA;
-            CityB = cityB;
-            WarmerDaysCount = warmerDays;
-            RainierDaysCount = rainierDays;
-        }
-    }
+    public int RainierDaysCount { get; init; } = rainierDays;
 }
